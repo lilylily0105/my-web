@@ -3,6 +3,8 @@ lilychamu
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<!-- FontAwesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DAWN BEAT</title>
@@ -76,23 +78,40 @@ lilychamu
 		<h1>DAWN BEAT</h1>
 		<p>夜明けの鼓動が、あなたの心を揺さぶる。</p>
 		<button class="btn" onclick="playAudio()">音楽を再生</button>
-		<button class="btn" onclick="stopAudio()" style="margin-left: 1rem;">停止</button>
+		<div class="player-controls">
+			<button class="btn icon-btn" id="play-btn" onclick="playAudio()" title="再生">
+				<i class="fas fa-play"></i>
+			</button>
+			<button class="btn icon-btn" id="pause-btn" onclick="pauseAudio()" title="一時停止">
+				<i class="fas fa-pause"></i>
+			</button>
+			<button class="btn icon-btn" id="stop-btn" onclick="stopAudio()" title="停止">
+				<i class="fas fa-stop"></i>
+			</button>
+		</div>
 		<div class="audio-player">
 			<audio id="dawn-audio" src="夜明けの鼓動.mp3"></audio>
 		</div>
 		<div class="credit">© 2025 DAWN BEAT</div>
 	</div>
 	<script>
-		function playAudio() {
-			const audio = document.getElementById('dawn-audio');
-			audio.play();
-		}
+	const audio = document.getElementById('dawn-audio');
+	const playBtn = document.getElementById('play-btn');
+	const pauseBtn = document.getElementById('pause-btn');
+	const stopBtn = document.getElementById('stop-btn');
 
-		function stopAudio() {
-			const audio = document.getElementById('dawn-audio');
-			audio.pause();
-			audio.currentTime = 0;
-		}
+	function playAudio() {
+		audio.play();
+	}
+
+	function pauseAudio() {
+		audio.pause();
+	}
+
+	function stopAudio() {
+		audio.pause();
+		audio.currentTime = 0;
+	}
 	</script>
 </body>
 </html>
