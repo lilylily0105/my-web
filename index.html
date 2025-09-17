@@ -44,28 +44,22 @@ lilychamu
 			box-shadow: 0 8px 40px #ff1a8c33, 0 2px 16px #000a;
 			padding: 2.5rem 2rem 2rem 2rem;
 			max-width: 370px;
-			<div class="music-app-container simple">
-				<img class="girl-image-simple" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&h=400&facepad=2" alt="金髪でピアスのクールな女の子">
-				<div class="music-title simple">DAWN BEAT</div>
-				<div class="player-controls simple">
-					<button class="btn icon-btn simple" id="play-btn" onclick="playAudio()" title="再生">
+			<div class="music-app-container">
+				<div class="player-controls">
+					<button class="btn icon-btn" id="play-btn" onclick="playAudio()" title="再生">
 						<i class="fas fa-play"></i>
 					</button>
-					<button class="btn icon-btn simple" id="pause-btn" onclick="pauseAudio()" title="一時停止">
+					<button class="btn icon-btn" id="pause-btn" onclick="pauseAudio()" title="一時停止">
 						<i class="fas fa-pause"></i>
 					</button>
-					<button class="btn icon-btn simple" id="stop-btn" onclick="stopAudio()" title="停止">
+					<button class="btn icon-btn" id="stop-btn" onclick="stopAudio()" title="停止">
 						<i class="fas fa-stop"></i>
 					</button>
 				</div>
-				<audio id="dawn-audio" src="夜明けの鼓動.mp3"></audio>
+				<div class="audio-player">
+					<audio id="dawn-audio" src="夜明けの鼓動.mp3"></audio>
+				</div>
 			</div>
-			font-size: 1.1rem;
-			margin-bottom: 1.8rem;
-			color: #ffb6e6;
-			letter-spacing: 0.03em;
-		}
-		.player-controls {
 			display: flex;
 			justify-content: center;
 			gap: 1.5rem;
@@ -111,38 +105,7 @@ lilychamu
 				font-size: 1.3rem;
 			}
 		}
-	</style>
-</head>
-<body>
-	<div class="music-app-container">
-		<div class="girl-image-wrap">
-			<img class="girl-image" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400&facepad=2" alt="かっこいい女の子">
-		</div>
-		<div class="music-title">DAWN BEAT</div>
-		<div class="music-desc">夜明けの鼓動が、あなたの心を揺さぶる。</div>
-		.girl-image-wrap {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: 1.2rem;
-		}
-		.girl-image {
-			width: 110px;
-			height: 110px;
-			object-fit: cover;
-			border-radius: 50%;
-			border: 4px solid #ff1a8c;
-			box-shadow: 0 2px 24px #ff1a8c55, 0 1px 8px #000a;
-			background: #1a001a;
-		}
-		<div class="player-controls">
-			<button class="btn icon-btn" id="play-btn" onclick="playAudio()" title="再生">
-				<i class="fas fa-play"></i>
-			</button>
-			<button class="btn icon-btn" id="pause-btn" onclick="pauseAudio()" title="一時停止">
-				<i class="fas fa-pause"></i>
-			</button>
-			<button class="btn icon-btn" id="stop-btn" onclick="stopAudio()" title="停止">
+
 				<i class="fas fa-stop"></i>
 			</button>
 		</div>
